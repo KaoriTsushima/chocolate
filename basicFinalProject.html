@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Chocolate</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      }
+      .contents {
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      h1 {
+        font-size: 50pt;
+        font-style: italic;
+        color: #854836;
+      }
+      h2 {
+        font-size: 35pt;
+        color: #45171d;
+      }
+      img {
+        display: block;
+        margin: 15px auto;
+      }
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 15pt;
+        max-width: 650px;
+        margin: 10px auto;
+      }
+      .learnMore {
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+        max-width: 650px;
+      }
+      .buyButton {
+        display: block;
+        font-size: 25pt;
+        font-weight: bold;
+        color: #45171d;
+        background: #dfd3c3;
+        padding: 20px;
+        border: 10px, solid, #45171d;
+        border-radius: 25px;
+        margin: 20px auto;
+        max-width: 650px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      }
+      .buyButton:hover {
+        color: #dfd3c3;
+        background: #45171d;
+        cursor: pointer;
+      }
+      .footer {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        line-height: normal;
+      }
+      .editorName {
+        text-decoration: none;
+        color: #45171d;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <h1>I Love Chocolate</h1>
+      <h2>Especially Dark Chocolate 🤎</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/718/original/dark_chocolate.jpg?1688217111"
+        alt="Dark Chocolate"
+        width="580px"
+      />
+      <hr />
+      <p>
+        Made from the seeds of the cacao tree, dark chocolate is a rich,
+        bitter-tasting chocolate made from processed cocoa solids, sugar and
+        cocoa butter. The percentage of cocoa affects the flavour and
+        bitterness, with the most popular products containing between
+        <strong>70-85%</strong>
+        cocoa solids.
+        <br />
+        <a
+          href="https://www.bbcgoodfood.com/howto/guide/dark-chocolate-good-you"
+          target="_blank"
+          class="learnMore"
+        >
+          learn more on BBC
+        </a>
+      </p>
+
+      <br />
+      <button class="buyButton">Buy Dark Chocolate 🍫</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/kaori-tsushima-b836601a8/"
+          target="_blank"
+          class="editorName"
+        >
+          <span><em>Kaori Tsushima</em></span>
+        </a>
+      </p>
+    </div>
+    <script>
+      function buyChocolate() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let message = `Thank you ${name} ! We'll be in touch by email, meanwhile have lot of Chocolates 🍫`;
+
+        if (email.includes("@")) {
+          alert(message);
+        } else {
+          alert("Invalid email address... Please try again");
+        }
+      }
+
+      let buyButton = document.querySelector(".buyButton");
+      buyButton.addEventListener("click", buyChocolate);
+    </script>
+  </body>
+</html>
